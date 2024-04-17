@@ -2,10 +2,44 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Solution {
         public int[] solution(int n, String[] words) {
-            int[] answer = {0,0};
+        //GPT 풀이.......;;;
+            
+        int[] answer = {0, 0};
+        Set<String> seenWords = new HashSet<>(); // To store words that have been seen
+        seenWords.add(words[0]); // Adding the first word to the set
+        char lastChar = words[0].charAt(words[0].length() - 1); // Last character of the first word
+
+        for (int i = 1; i < words.length; i++) {
+            String currentWord = words[i];
+
+            // Check if the word has already been said or if it doesn't follow the last letter rule
+            if (seenWords.contains(currentWord) || lastChar != currentWord.charAt(0)) {
+                answer[0] = (i % n) + 1; // Player number (1-based index)
+                answer[1] = (i / n) + 1; // Round number (1-based index)
+                return answer;
+            }
+
+            // Add the current word to the set of seen words
+            seenWords.add(currentWord);
+            // Update lastChar to the last character of the current word
+            lastChar = currentWord.charAt(currentWord.length() - 1);
+        }
+
+        // Return {0, 0} if no errors were found
+        return answer;
+            
+            
+            
+            
+            
+            
+            //나의 풀이
+            /* int[] answer = {0,0};
             List<String> li = new ArrayList<>();
             List<String> li2 = new ArrayList<>();
             Collections.addAll(li, words);
@@ -41,5 +75,6 @@ public class Solution {
                 }
             }
             return answer;
+            */
     }
 }
