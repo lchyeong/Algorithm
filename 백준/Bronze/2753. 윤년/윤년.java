@@ -7,7 +7,7 @@ public class Main {
 
         int year = sc.nextInt();
 
-        //3항연산자 사용
+        //3항연산자 사용함
         //int y = (year % 4 == 0 && year%100 != 0 || year % 400 == 0) ? 1 : 0;
         //System.out.println(y);
 
