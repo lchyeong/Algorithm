@@ -1,4 +1,4 @@
-n = int(input("number : "))
+x = int(input("number : "))
 
 
 def sum_n(n):
@@ -8,4 +8,4 @@ def sum_n(n):
     return sum
 
 
-print(sum_n(n))
+print(sum_n(x))
