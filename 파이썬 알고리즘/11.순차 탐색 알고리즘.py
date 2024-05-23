@@ -1,6 +1,9 @@
-def
+def search_list(li, n):
+    for i in range(0, len(li)-1):
+        if n == li[i]:
+            return i
 
-
+    return -1
 
 
 
