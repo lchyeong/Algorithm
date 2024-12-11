@@ -22,7 +22,7 @@ public class Main{
         }
 
         for (List<Integer> a : inputs) {
-            buckets = inputBalls(a.get(0), a.get(1), a.get(2), buckets);
+            inputBalls(a.get(0), a.get(1), a.get(2), buckets);
         }
 
         String result = buckets.stream()
@@ -31,10 +31,9 @@ public class Main{
         System.out.println(result);
     }
 
-    private static List<Integer> inputBalls(int start, int end, int num, List<Integer> buckets){
+    private static void inputBalls(int start, int end, int num, List<Integer> buckets){
        for(int i=start-1 ; i < end; i++){
            buckets.set(i,num);
        }
-       return buckets;
     }
 }
