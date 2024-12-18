@@ -6,13 +6,13 @@ public class Main{
 
         String input = sc.nextLine();
 
+        
         input = input.trim();
         if (input.isEmpty()) {
-            System.out.println(0); 
+            System.out.println(0);
         } else {
             String[] words = input.split(" ");
             System.out.println(words.length);
         }
-
     }
 }
